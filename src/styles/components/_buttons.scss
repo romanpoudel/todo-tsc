@@ -1,0 +1,31 @@
+@use "../abstracts" as a ;
+
+.btn {
+	min-height: a.rem(48);
+	padding: a.rem(8) a.rem(16);
+	background: #ddd;
+	border-radius: a.rem(4);
+	border: a.rem(1) solid #999;
+}
+.btn-add {
+	color: #fff;
+	cursor: pointer;
+	color: a.$primaryColor;
+	font-size: a.rem(24);
+}
+
+.btn-add:hover {
+	color: darken(a.$primaryColor,5%);
+}
+
+.btn-add:active {
+	color: a.$primaryColor;
+}
+
+.deleteIcon{
+	position: absolute;
+	right: a.rem(10);
+	color: a.$primaryColor;
+	font-size: a.rem(25);
+	cursor: pointer;
+}

@@ -1,0 +1,9 @@
+@use "./functions" as f;
+
+// colors
+$primaryColor:hsl(148, 96%, 28%);
+
+$breakpoints-up: (
+	"medium": f.rem(640),
+	"large": f.rem(1024),
+);

@@ -1,0 +1,28 @@
+@use "../abstracts" as a;
+
+.search-container {
+  padding-top: a.rem(8) ;
+  padding-bottom: a.rem(8) ;
+  position: relative;
+}
+
+.search{
+  &__input{
+    box-shadow: 0 a.rem(1) a.rem(2) rgba(0, 0, 0, 0.25);
+		min-height: a.rem(60);
+		border-radius: a.rem(3);
+		padding: 0 a.rem(40) 0 a.rem(15);
+		border: a.rem(2) solid transparent;
+		width: 100%;
+  }
+  &__icon{
+    position: absolute;
+		top: 50%;
+		right: a.rem(10);
+		transform: translateY(-50%);
+		color: #038e43;
+		font-size: a.rem(24);
+    cursor: pointer;
+    padding-right: a.rem(10);
+  }
+}

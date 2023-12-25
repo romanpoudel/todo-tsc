@@ -1,0 +1,39 @@
+@use "../abstracts" as a;
+
+.header {
+	background-color: a.$primaryColor;
+	box-shadow: 0 a.rem(5) a.rem(10) rgba(0, 0, 0, 0.1);
+	&__main {
+		padding-top: a.rem(8);
+		padding-bottom: a.rem(8);
+		margin-bottom: a.rem(16);
+		color: hsl(0, 0%, 100%);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		@include a.breakpoint(medium) {
+			flex-direction: row;
+		}
+	}
+	&__links {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		list-style-type: none;
+		padding-left: 0;
+		li {
+			margin-left: a.rem(25);
+			@include a.breakpoint(medium) {
+				margin-left: a.rem(72);
+			}
+		}
+	}
+	&__link{
+		cursor: pointer;
+		&--active{
+			font-weight: bold;
+			font-size: a.rem(20);
+		}
+	}
+}

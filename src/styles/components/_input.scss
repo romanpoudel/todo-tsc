@@ -1,0 +1,53 @@
+@use "../abstracts" as a;
+
+.input {
+	width: 100%;
+	min-height: a.rem(48);
+	padding: a.rem(8) a.rem(16);
+	border-radius: a.rem(4);
+	border: a.rem(1) solid #ccc;
+}
+
+.input:focus {
+	outline: max(2px, 0.15em) solid a.$primaryColor;
+	outline-offset: max(2px, 0.15em);
+}
+
+/* Hide the default checkbox */
+input[type="checkbox"] {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	min-width: a.rem(30);
+	height: a.rem(30);
+	border-radius: 50%;
+	outline: none;
+	border: 2px solid #ccc;
+	position: relative;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+
+input[type="checkbox"]:checked {
+	background-color: a.$primaryColor;
+	border-color: a.$primaryColor; 
+}
+
+/* Create a checkmark using the ::before pseudo-element */
+input[type="checkbox"]::before {
+	content: "✔"; 
+	font-size: 14px;
+	color: white; 
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0; /* Initially hidden */
+	transition: opacity 0.3s;
+}
+
+/* Show the checkmark when the checkbox is checked */
+input[type="checkbox"]:checked::before {
+	opacity: 1;
+}

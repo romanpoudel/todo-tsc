@@ -1,0 +1,14 @@
+@use "./functions" as f;
+@use "./mixins" as m;
+
+.container {
+	padding: 0 f.rem(24);
+	@include m.breakpoint (medium) {
+		padding: 0 f.rem(36);
+	}
+	@include m.breakpoint(large) {
+		padding: 0 f.rem(20);
+		max-width: f.rem(1200);
+		margin: 0 auto;
+	}
+}
