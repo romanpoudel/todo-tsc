@@ -5,7 +5,7 @@ FROM node:18-alpine
 WORKDIR /app
 
 # Copy package.json and package-lock.json to the working directory
-COPY package*.json ./
+COPY package*.json .
 
 # Install dependencies
 RUN npm install
@@ -13,11 +13,9 @@ RUN npm install
 # Copy all files from the current directory to the working directory
 COPY . .
 
-# Build the Vite project
-RUN npm run build
 
 # Expose the port that your Vite application will run on
 EXPOSE 5173
 
 # Define the command to run your Vite application
-CMD ["npm", "run", "dev"]
+CMD npm run dev -- --host
