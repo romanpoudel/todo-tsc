@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Bootstrap Font Icon CSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+		/>
+		<title>Todo</title>
+		<script type="module" crossorigin src="/assets/index-IkvCUCPE.js"></script>
+		<link rel="stylesheet" crossorigin href="/assets/index-RvfFUM12.css">
+	</head>
+	<body>
+		<!-- header  -->
+		<header class="header">
+			<div class="header__main container">
+				<h1>Todo</h1>
+				<nav>
+					<ul class="header__links">
+						<li>
+							<p class="header__link" id="all">Home</p>
+						</li>
+						<li>
+							<p class="header__link" id="complete">Completed</p>
+						</li>
+						<li>
+							<p class="header__link" id="remain">Remaining</p>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<main id="app" class="container">
+			<!-- search  -->
+			<div id="search-container" class="search-container">
+				<input
+					type="text"
+					id="search-input"
+					class="input search__input"
+					placeholder="search..."
+				/>
+				<i class="bi bi-search search__icon"></i>
+			</div>
+			<!-- input field  -->
+			<div class="task">
+				<div class="task__input">
+					<input
+						type="text"
+						placeholder="Add a task"
+						id="textInput"
+						class="input task__input--field"
+					/>
+					<i
+						class="bi bi-plus-circle-fill btn-add task__input--icon"
+						title="add"
+					></i>
+				</div>
+				<!-- list tasks  -->
+				<div id="task-list"></div>
+			</div>
+		</main>
+	</body>
+</html>
